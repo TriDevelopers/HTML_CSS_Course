@@ -6,4 +6,19 @@ p {
 
 body {
     margin: 0;
+    padding-top: 80px;
+    padding-left: 80px;
+}
+
+.video-time {
+    background-color: black;
+    color:white;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    font-weight: 500px;
+    padding: 4px;
+    border-radius: 2px;
 }
