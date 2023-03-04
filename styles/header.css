@@ -43,16 +43,13 @@
     height: 36px;
     width: 0;
     padding-left: 10px;
-    font-size: 16px;
-    border-width: 1px;
+    font-size: 16px; 
     border-radius: 2px;
-    border-style: solid;
-    border-color: rgb(192,192,192);
+    border: 1px solid rgb(192,192,192);
     box-shadow: inset 1px 2px 3px rgba(0,0,0,0.15);
 }
 
 .search-bar::placeholder {
-    font-family: Roboto, Arial;
     font-size: 16px;
     padding-left: 10px;
 }
@@ -68,12 +65,46 @@
     margin-right: 10px;
 }
 
+.search-button, .voice-search-button,
+.upload-icon-container, .youtube-app-icon-container,
+.notification-icon-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-app-icon-container .tooltip,
+.notification-icon-container .tooltip {
+    position: absolute;
+    font-size: 12px;
+    background-color: grey;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 2px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-app-icon-container:hover .tooltip,
+.notification-icon-container:hover .tooltip {
+    opacity: 1;
+}
+
 .search-icon {
-    margin-top: 4px;
     height: 25px;
 }
 
-.voice-search-buttion {
+.voice-search-button {
     height: 40px;
     width: 40px;
     border-radius: 20px;
@@ -83,7 +114,6 @@
 
 .voice-search-icon {
     height: 24px;
-    margin-top: 4px;
 }
 
 .right-section {
@@ -107,23 +137,15 @@
     height: 24px;
 }
 
-.notification-icon-container {
-    position: relative;
-}
-
 .notification-count {
     position: absolute;
     top: -2px;
     right:-5px;
     background-color: rgb(200,0,0);
     border-radius: 10px;
-    font-family: Roboto, Arial;
     color: white;
     font-size: 11px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding: 2px 5px;
 }
 
 .profile-picture {
